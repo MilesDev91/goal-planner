@@ -1,11 +1,18 @@
 import React from "react";
-import { Box, Typography } from "@mui/material";
+import { AppBar, Button, Container, Toolbar, Typography } from "@mui/material";
 
 const Navbar: React.FC = () => {
   return (
-    <Box sx={{ mx: 1 }}>
-      <Typography variant="h1">Hello</Typography>
-    </Box>
+    <AppBar position="static">
+      <Container maxWidth="xl">
+        <Toolbar disableGutters>
+          <Typography variant="h5" sx={{ flexGrow: 1 }}>
+            Goal Planner
+          </Typography>
+          <Button color="inherit">Login</Button>
+        </Toolbar>
+      </Container>
+    </AppBar>
   );
 };
 
