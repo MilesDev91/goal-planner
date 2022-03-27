@@ -1,10 +1,10 @@
 import React from "react";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 
 const Navbar: React.FC = () => {
   return (
-    <Box>
-      <p>Hello</p>
+    <Box sx={{ mx: 1 }}>
+      <Typography variant="h1">Hello</Typography>
     </Box>
   );
 };
