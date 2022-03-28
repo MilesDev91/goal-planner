@@ -22,14 +22,14 @@ export default function SignUp(): JSX.Element {
           component="h1"
           sx={{ textAlign: "center", mb: 3 }}
         >
-          Sign Up
+          Login
         </Typography>
         <AuthForm handleSubmit={handleSubmit} />
         <Box sx={{ mt: 3, textAlign: "center" }}>
           <Typography>
-            Already have an account?{" "}
-            <Link to="/login" component={RouteLink}>
-              Login
+            Need an account?{" "}
+            <Link to="/sign-up" component={RouteLink}>
+              Sign up
             </Link>
           </Typography>
         </Box>
