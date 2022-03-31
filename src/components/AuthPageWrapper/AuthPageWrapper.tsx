@@ -1,21 +1,13 @@
 import { Box, Paper } from "@mui/material";
-import React, { useState, useEffect } from "react";
+import React from "react";
+import useWindowWidth from "../../helpers/hooks/useWindowWidth";
 
 interface Props {
   children: React.ReactNode;
 }
 
 const AuthPageWrapper: React.FC<Props> = ({ children }: Props) => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-  const updateWindowWidth = () => {
-    setWindowWidth(window.innerWidth);
-  };
-
-  useEffect(() => {
-    window.addEventListener("resize", updateWindowWidth);
-    return () => window.removeEventListener("resize", updateWindowWidth);
-  });
+  const windowWidth = useWindowWidth(window);
 
   return (
     <Box
@@ -25,8 +17,8 @@ const AuthPageWrapper: React.FC<Props> = ({ children }: Props) => {
         minHeight: 700,
         margin: "0 auto",
         borderRadius: 2,
-        boxShadow: windowWidth < 600 ? "none" : 4,
-        padding: windowWidth < 600 ? 0 : 10,
+        boxShadow: windowWidth && windowWidth < 600 ? "none" : 4,
+        padding: windowWidth && windowWidth < 600 ? 0 : 10,
       }}
     >
       <Box sx={{ width: 350, margin: "0 auto" }}>{children}</Box>
