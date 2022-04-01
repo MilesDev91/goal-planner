@@ -1,6 +1,8 @@
-import { AppBar, Grid, Link, Toolbar, Typography } from "@mui/material";
+import { AppBar, Link, Toolbar, Typography } from "@mui/material";
+import { Routes, Route } from "react-router-dom";
 import { Link as RouterLink } from "react-router-dom";
 import PageContainer from "../../components/PageContainer/PageContainer";
+import Calendar from "./Calendar/Calendar";
 
 const dashboardOptions = [
   {
@@ -28,10 +30,9 @@ export default function Dashboard(): JSX.Element {
         </Toolbar>
       </AppBar>
       <PageContainer>
-        <Grid container>
-          <Grid item md={4} sm={0}></Grid>
-          <Grid item md={8} sm={12}></Grid>
-        </Grid>
+        <Routes>
+          <Route path="/dashboard" element={<Calendar />} />
+        </Routes>
       </PageContainer>
     </>
   );
