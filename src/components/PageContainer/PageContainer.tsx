@@ -11,6 +11,7 @@ const PageContainer: React.FC<PageContainerProps> = ({ children }) => {
       sx={{
         width: "95%",
         margin: "40px auto",
+        display: "flex",
       }}
     >
       {children}

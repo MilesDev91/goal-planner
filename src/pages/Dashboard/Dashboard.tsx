@@ -31,7 +31,7 @@ export default function Dashboard(): JSX.Element {
       </AppBar>
       <PageContainer>
         <Routes>
-          <Route path="/dashboard" element={<Calendar />} />
+          <Route path="/" element={<Calendar />} />
         </Routes>
       </PageContainer>
     </>
